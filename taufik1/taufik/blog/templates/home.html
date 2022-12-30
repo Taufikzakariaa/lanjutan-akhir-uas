@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>TH elements define table headers</h2>
+{% for blog in blogs %}
+<table style="width:100%">
+  <tr>
+    <th>{{blog.title}}</th>
+    <th>{{blog.body}}</th>
+    <th>{{blog.category}}</th>
+  </tr>
+</table>
+{% endfor %}
+
+<button type="button" class="btn btn-light">
+				<a href="{% url 'data_baru' %}">Tambahkan data</a>
+			</button>
+
+</body>
+</html>
